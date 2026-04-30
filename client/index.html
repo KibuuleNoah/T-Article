@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>t-article</title>
+
+    <style>
+      /* GLOBAL COLOR CONFIGURATION */
+      :root {
+        --primary-color: #0d6efd; /* Main brand color */
+        --accent-color: #f8f9fa; /* Background/Surface color */
+        --text-main: #212529; /* Body text */
+        --text-muted: #6c757d; /* Excerpts and dates */
+        --border-radius: 12px;
+      }
+
+      body {
+        background-color: var(--accent-color);
+        color: var(--text-main);
+      }
+
+      .article-card {
+        border: none;
+        border-radius: var(--border-radius);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .tag-badge {
+        background-color: rgba(13, 110, 253, 0.1);
+        color: var(--primary-color);
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+
+      .article-meta {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

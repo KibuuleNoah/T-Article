@@ -1,0 +1,150 @@
+[
+  {
+    "id": "art-001",
+    "title": "The Rise of Edge Computing",
+    "excerpt": "Why the future of the web is moving closer to the user.",
+    "content": [
+      "Edge computing is fundamentally changing how we deploy applications by moving logic away from centralized data centers.",
+      "By processing data closer to the source, we can achieve near-instantaneous load times.",
+      "This shift is particularly impactful for IoT devices and real-time tools."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["Infrastructure", "Tech"],
+    "isPublic": true,
+    "createdAt": "2026-04-10T10:00:00Z",
+    "updatedAt": "2026-04-12T14:30:00Z"
+  },
+  {
+    "id": "art-002",
+    "title": "Productivity Hacks for Remote Devs",
+    "excerpt": "Simple habits to keep your focus sharp while working from home.",
+    "content": [
+      "Working from home offers great flexibility, but it also introduces unique distractions.",
+      "Establishing a dedicated workspace helps the brain transition between professional and personal time.",
+      "We recommend the Pomodoro technique combined with proactive calendar blocking."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["Productivity", "RemoteWork"],
+    "isPublic": true,
+    "createdAt": "2026-04-15T08:00:00Z",
+    "updatedAt": "2026-04-15T08:00:00Z"
+  },
+  {
+    "id": "art-003",
+    "title": "Understanding CSS Grid",
+    "excerpt": "A beginner's guide to the most powerful layout system in CSS.",
+    "content": [
+      "CSS Grid is a two-dimensional layout system for aligning elements into rows and columns.",
+      "Unlike Flexbox, Grid gives you total control over both axes simultaneously.",
+      "Modern browsers now have excellent support for Grid layouts."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["CSS", "Frontend"],
+    "isPublic": true,
+    "createdAt": "2026-04-20T12:00:00Z",
+    "updatedAt": "2026-04-21T09:15:00Z"
+  },
+  {
+    "id": "art-004",
+    "title": "Draft: Q3 Roadmap Planning",
+    "excerpt": "Internal notes on upcoming features and infrastructure upgrades.",
+    "content": [
+      "Our primary focus will be on migrating our legacy database.",
+      "We also plan to introduce a new plugin architecture for third-party developers.",
+      "Final approval is expected during the executive review next month."
+    ],
+    "tags": ["Internal", "Planning"],
+    "isPublic": false,
+    "createdAt": "2026-04-28T16:00:00Z",
+    "updatedAt": "2026-04-29T11:20:00Z"
+  },
+  {
+    "id": "art-005",
+    "title": "The Importance of Unit Testing",
+    "excerpt": "How writing tests today saves you hundreds of hours of debugging tomorrow.",
+    "content": [
+      "Unit testing is the most effective way to document code behavior.",
+      "A robust test suite acts as a safety net for refactoring logic.",
+      "Ideally, tests should be small, isolated, and fast."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["Testing", "SoftwareQuality"],
+    "isPublic": true,
+    "createdAt": "2026-04-01T09:00:00Z",
+    "updatedAt": "2026-04-01T09:00:00Z"
+  },
+  {
+    "id": "art-006",
+    "title": "State Management in 2026",
+    "excerpt": "Moving beyond Redux: Why signals and atomic state are taking over.",
+    "content": [
+      "The landscape of state management has shifted away from heavy, centralized stores toward more granular, reactive primitives.",
+      "Signals allow for fine-grained updates, ensuring that only the specific components needing data are re-rendered.",
+      "This approach reduces boilerplate significantly and makes complex application logic much easier to track and debug."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["React", "JavaScript", "State"],
+    "isPublic": true,
+    "createdAt": "2026-04-25T09:15:00Z",
+    "updatedAt": "2026-04-25T09:15:00Z"
+  },
+  {
+    "id": "art-007",
+    "title": "WebAssembly for Frontend Devs",
+    "excerpt": "How to run high-performance C++ and Rust code directly in the browser.",
+    "content": [
+      "WebAssembly (Wasm) is no longer a niche technology for game engines; it is becoming a staple for heavy data processing in web apps.",
+      "By compiling languages like Rust to Wasm, we can perform complex image manipulation and physics simulations at native speeds.",
+      "Integration with JavaScript has become seamless, allowing developers to use Wasm modules just like standard ES modules."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["Wasm", "Performance", "Rust"],
+    "isPublic": true,
+    "createdAt": "2026-04-26T14:20:00Z",
+    "updatedAt": "2026-04-27T10:00:00Z"
+  },
+  {
+    "id": "art-008",
+    "title": "The Evolution of Type Safety",
+    "excerpt": "Why TypeScript is just the beginning of the type-safe web revolution.",
+    "content": [
+      "Type safety has moved from being a luxury to a requirement for modern enterprise-grade web development.",
+      "We are seeing a rise in 'end-to-end' type safety, where database schemas automatically generate frontend types.",
+      "This eliminates a whole class of runtime errors that previously plagued large-scale JavaScript applications."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["TypeScript", "Backend", "DX"],
+    "isPublic": true,
+    "createdAt": "2026-04-28T11:00:00Z",
+    "updatedAt": "2026-04-28T11:00:00Z"
+  },
+  {
+    "id": "art-009",
+    "title": "Draft: Performance Audit Results",
+    "excerpt": "Preliminary findings from our Q2 site speed investigation.",
+    "content": [
+      "The latest Lighthouse scores show a 15% regression in Largest Contentful Paint (LCP) on our checkout page.",
+      "This appears to be caused by a new third-party tracking script that blocks the main thread during hydration.",
+      "Our next steps include moving these scripts to a Web Worker to free up the UI thread for user interactions."
+    ],
+    "tags": ["Performance", "Audit", "Internal"],
+    "isPublic": false,
+    "createdAt": "2026-04-29T15:30:00Z",
+    "updatedAt": "2026-04-30T08:45:00Z"
+  },
+  {
+    "id": "art-010",
+    "title": "Building Accessible Components",
+    "excerpt": "Practical tips for ensuring your UI is usable by everyone.",
+    "content": [
+      "Accessibility is not just a checklist; it is about creating an inclusive experience for users with varying abilities.",
+      "Using semantic HTML elements like <main>, <nav>, and <button> provides out-of-the-box support for screen readers.",
+      "Always ensure that your interactive elements have clear focus states and meet minimum color contrast requirements."
+    ],
+    "coverImage": "https://unsplash.com",
+    "tags": ["A11y", "UI", "Design"],
+    "isPublic": true,
+    "createdAt": "2026-04-30T10:00:00Z",
+    "updatedAt": "2026-04-30T10:00:00Z"
+  }
+]

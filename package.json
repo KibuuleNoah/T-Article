@@ -1,0 +1,18 @@
+{
+  "name": "t-article-monorepo",
+  "private": true,
+  "scripts": {
+    "dev:client": "npm run dev --workspace=@t-article/client",
+    "dev:server": "npm run dev --workspace=@t-article/server",
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && find . -name 'package-lock.json' -type f -delete && find . -name 'yarn.lock' -type f -delete && find . -name 'pnpm-lock.yaml' -type f -delete && find . -name 'dist' -type d -prune -exec rm -rf '{}' +"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "packages/*"
+  ]
+}
+

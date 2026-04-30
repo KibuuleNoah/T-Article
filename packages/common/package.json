@@ -1,0 +1,11 @@
+{
+  "name": "@t-article/common",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./index.ts",
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}
+

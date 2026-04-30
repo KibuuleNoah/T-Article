@@ -1,0 +1,21 @@
+{
+  "name": "@t-article/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.17.0",
+    "cors": "^2.8.6",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^24.12.2",
+    "tsx": "^4.0.0",
+    "typescript": "~6.0.2"
+  }
+}
