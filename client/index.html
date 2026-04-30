@@ -13,59 +13,46 @@
     <title>t-article</title>
 
     <style>
-      /* GLOBAL COLOR CONFIGURATION */
       :root {
-        --primary-color: #0d6efd; /* Main brand color */
-        --accent-color: #f8f9fa; /* Background/Surface color */
-        --text-main: #212529; /* Body text */
-        --text-muted: #6c757d; /* Excerpts and dates */
+        /* YOUR BRAND COLOR */
+        --primary-color: oklch(63.05% 0.112 227.4);
+
+        /* DARK THEME SYSTEM */
+
+        --bg-main: oklch(22.09% 0.033 227.4);
+        --bg-card: oklch(33.41% 0.055 227.4); /* Card surface */
+        --text-main: #f8fafc; /* Light text */
+        --text-muted: #94a3b8; /* Dimmed text */
+        --border-color: #334155; /* Card borders */
         --border-radius: 12px;
       }
 
       body {
-        background-color: var(--accent-color);
+        background-color: var(--bg-main);
         color: var(--text-main);
       }
 
       .article-card {
-        border: none;
-        border-radius: var(--border-radius);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .article-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-      }
-
-      .card-img-top {
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .btn-primary {
-        background-color: var(--primary-color);
-        border-color: var(--primary-color);
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
       }
 
       .tag-badge {
-        background-color: rgba(13, 110, 253, 0.1);
+        background-color: #ffffff;
         color: var(--primary-color);
-        font-size: 0.8rem;
-        text-decoration: none;
+      }
+
+      .border-top {
+        border-top-color: var(--border-color) !important;
       }
 
       .article-meta {
-        font-size: 0.85rem;
         color: var(--text-muted);
       }
     </style>
   </head>
-  <body>
+  <body data-bs-theme="dark">
     <div id="root"></div>
 
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>

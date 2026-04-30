@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@t-article/common": "workspace:*",
+    "@t-article/server": "workspace:*",
     "@tanstack/react-query": "^5.100.6",
     "@trpc/client": "^11.17.0",
     "@trpc/tanstack-react-query": "^11.17.0",

@@ -1,24 +1,46 @@
-const ArticleCard = () => {
+import type { Article } from "@t-article/common";
+import type React from "react";
+
+const ArticleCard: React.FC<Article> = ({
+  title,
+  excerpt,
+  // coverImage,
+  tags,
+  updatedAt,
+  isPublic,
+}) => {
   return (
-    <article className="card article-card shadow-sm">
+    <article
+      className={`card article-card shadow-sm h-100 ${!isPublic ? "opacity-75" : ""}`}
+    >
+      {/* Show cover image if exists, otherwise a placeholder */}
       <img
-        src="https://unsplash.com"
+        src={"/blog-p.png"}
         className="card-img-top"
-        alt="Cover Image"
+        alt={title}
+        style={{ height: "200px", objectFit: "cover" }}
       />
+
       <div className="card-body d-flex flex-column">
         <div className="mb-2">
-          <span className="badge tag-badge me-1">Engineering</span>
-          <span className="badge tag-badge me-1">React</span>
+          {!isPublic && (
+            <span className="badge bg-warning text-dark me-2">Draft</span>
+          )}
+          {tags.map((tag) => (
+            <span key={tag} className="badge tag-badge me-1">
+              {tag}
+            </span>
+          ))}
         </div>
-        <h5 className="card-title fw-bold">Understanding Clean Architecture</h5>
-        <p className="card-text text-muted small">
-          Learn how to structure your applications for long-term maintainability
-          and scalability.
-        </p>
+
+        <h5 className="card-title fw-bold">{title}</h5>
+
+        {excerpt && <p className="card-text text-muted small">{excerpt}</p>}
 
         <div className="mt-auto pt-3 border-top d-flex justify-content-between align-items-center article-meta">
-          <span>Updated: April 30, 2026</span>
+          <span className="small text-muted">
+            Updated: {updatedAt.toString()}
+          </span>
           <a href="#" className="btn btn-sm btn-outline-primary rounded-pill">
             Read More
           </a>
