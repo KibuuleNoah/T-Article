@@ -5,7 +5,9 @@ import { createTRPCClient, httpBatchLink } from "@trpc/client";
 import type { AppRouter } from "@t-article/server/src/routers";
 import { TRPCProvider } from "./utils/trpc";
 import ArticleList from "./componets/article-list";
-// import ArticleList from "./componets/article-list";
+import { AppProvider } from "./contexts/AppContext";
+import type { Article } from "@t-article/common";
+import ArticleDetail from "./componets/article-detail";
 
 export function App() {
   const [queryClient] = useState(() => new QueryClient());
@@ -19,10 +21,33 @@ export function App() {
     }),
   );
 
+  const [activeView, setActiveView] = useState("ArticleList");
+  const [articleInDetail, setArticleInDetail] = useState<Article>();
+
+  const renderContent = () => {
+    switch (activeView) {
+      case "ArticleList":
+        return <ArticleList />;
+      case "ArticleDetail":
+        return <ArticleDetail />;
+      default:
+        return <>Home </>;
+    }
+  };
+
   return (
     <TRPCProvider trpcClient={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <ArticleList />
+        <AppProvider
+          data={{
+            activeView,
+            setActiveView,
+            articleInDetail,
+            setArticleInDetail,
+          }}
+        >
+          {renderContent()}
+        </AppProvider>
       </QueryClientProvider>
     </TRPCProvider>
   );

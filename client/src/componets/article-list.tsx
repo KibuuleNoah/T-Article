@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useTRPC } from "../utils/trpc";
-import ArticleCard from "./arcticle-card";
+
+import ArticleCard from "./article-card";
+import type { Article } from "@t-article/common";
 
 const ArticleList = () => {
   const trpc = useTRPC();
@@ -38,7 +40,7 @@ const ArticleList = () => {
         {articles.length > 0 ? (
           articles.map((article) => (
             <div key={article.id} className="col-12 col-md-6 col-lg-4">
-              <ArticleCard {...article} />
+              <ArticleCard article={article} />
             </div>
           ))
         ) : (
